@@ -29,4 +29,9 @@ WriteMakefile( NAME          => 'Pg::PQ',
                DEFINE        => qq(-DPQMAJOR=$major -DPQVERSION='"$version"'), # e.g., '-DHAVE_SOMETHING'
                INC           => "-I. -I$incdir",
                # OBJECT        => '$(O_FILES)', # link all the C files too
+               META_MERGE    => {
+                   resources => {
+                       repository => 'https://github.com/salva/p5-Pg-PQ',
+                   },
+               },
              );
